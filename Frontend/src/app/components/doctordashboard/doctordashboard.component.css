@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Merienda+One&family=Staatliches&display=swap');
+
+/* 3D Animated Colorful Background */
+.dashboard-main {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #FF6B6B, #4ECDC4, #45B7D1, #FFA07A, #98D8C8, #F7DC6F, #BB8FCE, #85C1E2);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  margin-left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Add glass morphism effect to container */
+.dashboard-main .container {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 30px;
+  margin-top: 20px;
+  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Animated background pattern overlay - Multiple Layers */
+.dashboard-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 107, 107, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(78, 205, 196, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(69, 183, 209, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 160, 122, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(187, 143, 206, 0.3) 0%, transparent 50%);
+  animation: patternMove 25s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes patternMove {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.5;
+  }
+  25% {
+    transform: scale(1.1) rotate(90deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: scale(1.1) rotate(270deg);
+    opacity: 0.7;
+  }
+}
+
+/* Floating Bubbles Effect */
+.dashboard-main::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.2) 1%, transparent 2%),
+    radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.2) 1%, transparent 2%),
+    radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.2) 1%, transparent 2%),
+    radial-gradient(circle at 20% 70%, rgba(255, 255, 255, 0.2) 1%, transparent 2%),
+    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.2) 1%, transparent 2%);
+  background-size: 200px 200px, 300px 300px, 250px 250px, 280px 280px, 220px 220px;
+  animation: bubbleFloat 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes bubbleFloat {
+  0% {
+    background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%, -100% -100%, 50% -50%, -50% 50%, 100% -100%;
+  }
+}
+
+.menu{
+  position:relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.3);
+  width:0px;
+  height:115vh;
+  float:left;
+  transition:all 0.3s ease;
+  transform:translateX(-300px);
+}
+.menuToggle{
+  font-size:20px;
+  position:relative;
+  display:inline-block;
+  padding:10px;
+  text-align:center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color:white;
+  width:50px;
+  height:50px;
+  transition:all 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+.menuToggle:hover{
+  text-decoration:none;
+  color:white;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+}
+.menuToggle_open{
+  margin:0px 0px;
+  transform:rotate(90deg);
+}
+.hideMenu{
+  transition:all 0.3s ease;
+  transform:translateX(0px);
+  width:200px;
+}
+
+.menu ul{
+  list-style-type: none;
+  padding:0px;
+  transition:all 0.3s ease;
+}
+.menu ul ul{
+  padding-left:10px;
+  margin-left:0px;
+  background: linear-gradient(135deg, #5a67d8 0%, #6b4ba0 100%);
+}
+.menu ul li{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition:all 0.3s ease;
+}
+.menu ul li:hover{
+  background: linear-gradient(135deg, #5a67d8 0%, #6b4ba0 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transform: translateX(5px);
+}
+.menu ul li:hover a{
+  color:white;
+}
+.menu ul li a{
+  padding:10px 10px;
+  display:block;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 18px;
+  color:white;
+  transition: transform .2s;
+  -webkit-transition: background-color 1s ease-out;
+-moz-transition: background-color 1s ease-out;
+-o-transition: background-color 1s ease-out;
+transition: background-color 1s ease-out;
+}
+.menu ul li a:hover{
+  text-decoration:none;
+}
+
+#userimg{
+  width: 100px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-top: 5%;
+  margin-right: auto;
+}
+.container
+{
+  margin-left: 10%;
+}
+.dashboard-card
+{
+  background: linear-gradient(135deg, rgba(21, 95, 95, 0.9) 0%, rgba(30, 130, 130, 0.9) 100%);
+  border-radius: 20px;
+  border: none;
+  width: 35%;
+  margin: 2% 5% 5.5% 5%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 3%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  animation: cardFloat 3s ease-in-out infinite;
+}
+
+/* Floating animation for cards */
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 3D Hover Effect for Cards */
+.dashboard-card:hover {
+  transform: translateY(-15px) scale(1.05) rotateX(5deg);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 15px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Shimmer effect on cards */
+.dashboard-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+.circle{
+  border-radius: 50%;
+  width: 30%;
+  height: 80px;
+  float: right;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), inset 0 -3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-card:hover .circle {
+  transform: scale(1.15) rotate(360deg);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), inset 0 -5px 15px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #ffffff 0%, #e8e8e8 100%);
+}
+#icons
+{
+  margin-left: 26%;
+  margin-top: 12%;
+  font-size: 3.5em;
+}
+.text
+{
+  font-family: 'aladin';
+  letter-spacing: 1px;
+  font-size: 35px;
+  font-weight: bolder;
+  color: white;
+  position: relative;
+  z-index: 10;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+  animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.sub-text
+{
+  font-family: 'aladin';
+  letter-spacing: 1px;
+  font-size: 25px;
+  color: white;
+  position: relative;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced heading styles */
+.dashboard-main .container .row > div:first-child {
+  position: relative;
+  z-index: 10;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6), 0 0 30px rgba(139, 0, 0, 0.5);
+  animation: headingPulse 3s ease-in-out infinite;
+}
+
+@keyframes headingPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.dashboard-main .container .row > div:nth-child(2) {
+  position: relative;
+  z-index: 10;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 100, 0, 0.4);
+}
+
+/* When menu is open, shift the dashboard content to the right */
+body.menu-open .dashboard-main {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+}
+
+/* Ensure menu button stays in place */
+.menuToggle {
+  position: fixed;
+  z-index: 1002;
+  left: 0;
+  top: 80px;
+}
+
+/* Ensure sidebar has proper z-index */
+.menu {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 80px;
+}

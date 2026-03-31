@@ -1,0 +1,209 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Modern 3D Colorful Healthcare Background */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Animated 3D Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 95%, rgba(120, 199, 255, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 20%, rgba(255, 175, 123, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 90%, rgba(123, 255, 178, 0.3) 0%, transparent 50%),
+    linear-gradient(135deg, 
+      #667eea 0%, 
+      #764ba2 25%, 
+      #f093fb 50%, 
+      #f5576c 75%, 
+      #4facfe 100%);
+  background-size: 
+    300% 300%,
+    300% 300%,
+    300% 300%,
+    300% 300%,
+    300% 300%,
+    400% 400%;
+  animation: 
+    gradientMove 15s ease infinite,
+    colorShift 20s ease-in-out infinite;
+  z-index: -2;
+}
+
+/* Floating 3D Shapes */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.05) 3px, transparent 3px),
+    radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.08) 2px, transparent 2px);
+  background-size: 50px 50px, 30px 30px, 70px 70px, 40px 40px;
+  animation: floatPattern 25s linear infinite;
+  z-index: -1;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%, 50% 50%, 0% 50%;
+  }
+  25% {
+    background-position: 100% 0%, 0% 100%, 100% 0%, 0% 0%, 50% 50%, 25% 75%;
+  }
+  50% {
+    background-position: 100% 100%, 0% 0%, 100% 100%, 0% 100%, 50% 50%, 75% 25%;
+  }
+  75% {
+    background-position: 0% 100%, 100% 0%, 0% 0%, 100% 0%, 50% 50%, 100% 50%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%, 50% 50%, 0% 50%;
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    filter: hue-rotate(0deg) saturate(1) brightness(1);
+  }
+  25% {
+    filter: hue-rotate(90deg) saturate(1.2) brightness(1.1);
+  }
+  50% {
+    filter: hue-rotate(180deg) saturate(1.1) brightness(1.05);
+  }
+  75% {
+    filter: hue-rotate(270deg) saturate(1.3) brightness(1.1);
+  }
+  100% {
+    filter: hue-rotate(360deg) saturate(1) brightness(1);
+  }
+}
+
+@keyframes floatPattern {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+  }
+}
+
+/* Glass Morphism Effect for Components */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Enhanced Card Effects */
+.card, .container, .wrapper {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 15px 25px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+  position: relative !important;
+}
+
+/* 3D Button Effects */
+.btn, button {
+  position: relative !important;
+  transform-style: preserve-3d !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn:hover, button:hover {
+  transform: translateY(-3px) rotateX(15deg) !important;
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.2),
+    0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn:active, button:active {
+  transform: translateY(1px) rotateX(5deg) !important;
+}
+
+/* Additional Font Awesome Fixes */
+.fas, .far, .fab, .fa {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+  font-weight: 900 !important;
+  display: inline-block !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  text-rendering: auto !important;
+  line-height: 1 !important;
+}
+
+.fab {
+  font-family: "Font Awesome 6 Brands" !important;
+}
+
+/* Smooth animations for all components */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* Improve text readability */
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Loading animation for better UX */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.loading {
+  animation: pulse 2s infinite;
+}

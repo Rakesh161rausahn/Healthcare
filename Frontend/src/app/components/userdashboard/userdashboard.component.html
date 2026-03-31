@@ -1,0 +1,93 @@
+<app-header></app-header>
+<button class='menuToggle'>&#9776;</button>
+<div class="menu">
+  <ul>
+    <li>
+        <div class="card" style="width:200px; background-color: #23ad9b;">
+            <div id="userimg" style="width:150px;">
+            <img *ngIf="gender === 'male' || gender === 'Male'" class="card-img-top" [src]="'assets/img/maleuser.png'" alt="Card image" style="width:100%">
+            <img *ngIf="gender === 'female' || gender === 'Female'" class="card-img-top" [src]="'assets/img/femaleuser.png'" alt="Card image" style="width:100%">
+            </div>
+            <div style="margin-left: auto; margin-right: auto;"  class="card-body">
+              <h4 style="font-weight: bolder;" class="card-title"><b>{{name}}</b></h4>
+            </div>
+          </div>
+    </li>
+    <li>
+      <a [routerLink]="['/edituserprofile']"><i class="fas fa-edit" aria-hidden="true"></i><span>&nbsp; Edit Profile</span></a>
+    </li>
+    <li>
+      <a [routerLink]="['/doctorlist']"><i class="fas fa-user-md" aria-hidden="true"></i><span>&nbsp; Doctor List</span></a>
+    </li>
+    <li>
+      <a [routerLink]="['/checkslots']"><i class="fas fa-clock" aria-hidden="true"></i><span>&nbsp; Check Slots</span></a>
+    </li>
+    <li>
+      <a [routerLink]="['/bookappointment']"><i class="fas fa-calendar-plus" aria-hidden="true"></i><span>&nbsp; New Appointment</span></a>
+    </li>
+    <li>
+      <a [routerLink]="['/approvalstatus']"><i class="fas fa-check-circle" aria-hidden="true"></i><span>&nbsp; Approval Status</span></a>
+    </li>
+    <li>
+      <a [routerLink]="['/prescriptionlist']"><i class="fas fa-prescription-bottle-alt" aria-hidden="true"></i><span>&nbsp; Your Prescription</span></a>
+    </li>
+  </ul>
+</div>
+
+<div class="container-fluid dashboard-main">
+  <!-- Title Section -->
+  <div class="row">
+    <div class="col-12">
+      <div class="dashboard-title">
+        <h1>Welcome to Smart HealthCare System User Dashboard</h1>
+        <p class="author-credit">Smart Healthcare System</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Cards Grid -->
+  <div class="row dashboard-cards-row">
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-4">
+      <div class="dashboard-card dashboard-card-doctors">
+        <div class="card-content-wrapper">
+          <div class="text">Total Doctors</div>
+          <div class="sub-text" *ngFor="let doctor of doctors | async">{{doctor}} doctors</div>
+        </div>
+        <div class="circle"><i id="icons" class="fas fa-user-md"></i></div>
+      </div>
+    </div>
+
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-4">
+      <div class="dashboard-card dashboard-card-users">
+        <div class="card-content-wrapper">
+          <div class="text">Total Users</div>
+          <div class="sub-text" *ngFor="let user of users | async">{{user}} users</div>
+        </div>
+        <div class="circle"><i id="icons" class="fas fa-user"></i></div>
+      </div>
+    </div>
+
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-4">
+      <div class="dashboard-card dashboard-card-patients">
+        <div class="card-content-wrapper">
+          <div class="text">Total Patients</div>
+          <div class="sub-text" *ngFor="let patient of patients | async">{{patient}} patients</div>
+        </div>
+        <div class="circle"><i id="icons" class="fas fa-users"></i></div>
+      </div>
+    </div>
+
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-4">
+      <div class="dashboard-card dashboard-card-slots">
+        <div class="card-content-wrapper">
+          <div class="text">Total Slots</div>
+          <div class="sub-text" *ngFor="let slot of slots | async">{{slot}} slots available</div>
+        </div>
+        <div class="circle"><i id="icons" class="fas fa-calendar-alt"></i></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br>
+<app-footer></app-footer>

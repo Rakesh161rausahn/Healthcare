@@ -1,0 +1,221 @@
+<!-- Modern Header/Navbar -->
+<header class="modern-header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="logo-section">
+        <i class="fas fa-hospital"></i>
+        <span class="brand-text">Smart HealthCare System</span>
+      </div>
+    </div>
+
+    <div class="navbar-menu">
+      <a class="nav-link" [routerLink]="['']">
+        <i class="fas fa-home"></i> Home
+      </a>
+      <a class="nav-link" href="#services">
+        <i class="fas fa-cogs"></i> Services
+      </a>
+      <a class="nav-link" [routerLink]="['/login']">
+        <i class="fas fa-sign-in-alt"></i> Login
+      </a>
+      <button class="cta-button" [routerLink]="['/registration']">
+        <i class="fas fa-user-plus"></i> Create Account
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">Smart Healthcare System</h1>
+      <h2 class="hero-subtitle">Connecting Patients, Doctors, and Admins Seamlessly</h2>
+      <p class="hero-description">Secure, Accessible, and Intelligent Healthcare Management for Everyone</p>
+
+      <div class="hero-buttons">
+        <button class="btn-primary" [routerLink]="['/registration']">
+          <i class="fas fa-rocket"></i> Get Started
+        </button>
+        <a class="btn-secondary" href="#services">
+          <i class="fas fa-info-circle"></i> Learn More
+        </a>
+        <a class="btn-secondary" href="https://doctorai12312.netlify.app" target="_blank">
+          <i class="fas fa-brain"></i> Disease Prediction
+        </a>
+      </div>
+
+      <div class="developer-credit">
+        <span>Smart Healthcare System</span>
+      </div>
+    </div>
+
+    <div class="hero-illustration">
+      <img class="floating-img" [src]="'assets/img/healthcaresystem.png'" alt="Healthcare System">
+      <div class="floating-elements">
+        <div class="floating-icon icon-1"><i class="fas fa-stethoscope"></i></div>
+        <div class="floating-icon icon-2"><i class="fas fa-pills"></i></div>
+        <div class="floating-icon icon-3"><i class="fas fa-heart"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Health Advisory Banner -->
+  <div class="health-advisory">
+    <i class="fas fa-heartbeat animated-heart"></i>
+    <span>💊 Stay Healthy !!! Stay Safe !!! Your Health is Our Priority 🌟</span>
+  </div>
+</section>
+
+<!-- Login Cards Section -->
+<main id="main" class="main-content">
+  <section id="services" class="login-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Choose Your Portal</h2>
+        <p class="section-subtitle">Access your personalized dashboard with secure login</p>
+      </div>
+
+      <div class="login-cards-grid">
+        <!-- Admin Login Card -->
+        <div class="login-card admin-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="card-title">Admin Login</h3>
+          </div>
+          <div class="card-content">
+            <div class="card-illustration">
+              <img [src]="'assets/img/admin.png'" alt="Admin" width="120" height="120">
+            </div>
+            <p class="card-description">Manage system settings, users, and oversee operations</p>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn" (click)="navigate()" [routerLink]="['/login']">
+              <span>Access Admin Panel</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Doctor Login Card -->
+        <div class="login-card doctor-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h3 class="card-title">Doctor Login</h3>
+          </div>
+          <div class="card-content">
+            <div class="card-illustration">
+              <img [src]="'assets/img/maledoctor.png'" alt="Doctor" width="120" height="120">
+            </div>
+            <p class="card-description">Manage appointments, patient records, and consultations</p>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn" (click)="navigate()" [routerLink]="['/login']">
+              <span>Access Doctor Portal</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Patient Login Card -->
+        <div class="login-card patient-card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-user-friends"></i>
+            </div>
+            <h3 class="card-title">Patient Login</h3>
+          </div>
+          <div class="card-content">
+            <div class="card-illustration">
+              <img [src]="'assets/img/maleuser.png'" alt="Patient" width="120" height="120">
+            </div>
+            <p class="card-description">Book appointments, view medical history, and connect with doctors</p>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn" (click)="navigate()" [routerLink]="['/login']">
+              <span>Access Patient Portal</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Choose Our Healthcare System?</h2>
+        <p class="section-subtitle">Advanced features designed for modern healthcare needs</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Lightning Fast</h3>
+          <p>Quick access to medical records and instant appointment booking</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Secure & Private</h3>
+          <p>Bank-level security with end-to-end encryption for all medical data</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>24/7 Available</h3>
+          <p>Round-the-clock access to healthcare services and emergency support</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Smart Analytics</h3>
+          <p>AI-powered insights and personalized health recommendations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Doctors Onboard</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">10,000+</div>
+          <div class="stat-label">Patients Served</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">25,000+</div>
+          <div class="stat-label">Appointments Booked</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">99.9%</div>
+          <div class="stat-label">Uptime Guarantee</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

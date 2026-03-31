@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Merienda+One&family=Staatliches&display=swap');
+
+/* Font Awesome 6 Icons Fix */
+.fab {
+  font-family: "Font Awesome 6 Brands" !important;
+  font-weight: 900 !important;
+}
+
+.fas {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+}
+
+.container
+{
+    max-width: 450px;
+    padding: 3px 40px 40px 40px;
+    margin-top: 2%; 
+    margin-bottom: 3%; 
+    border-radius: 10px; 
+    box-shadow: 5px 5px 35px 8px rgb(147, 158, 147); 
+    border-top: 8px solid rgb(6, 50, 53); 
+    background-color: white;
+}
+input{
+    border-radius: 12px;
+    margin-top: 8px;
+}
+.textual
+{
+    color: rgb(64, 85, 15); 
+    text-align: center; 
+    margin-top: -20px;
+    font-family: 'Aladin', cursive;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.loginbtn
+{
+    background-color: transparent;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 7px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin: auto;  
+    border: 1px solid black;
+    margin-top: 10px;
+}
+.loginbtn:hover
+{
+    background-color: rgb(23, 78, 78);
+    padding-left: 7%;
+    padding-right: 7%;
+    cursor: pointer;
+    color: white;
+}
+/* Social Media Icons Styling */
+.fab.fa-google {
+    color: #db4437 !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fab.fa-linkedin {
+    color: #0077b5 !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fab.fa-microsoft {
+    color: #00a1f1 !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fab.fa-twitter {
+    color: #1da1f2 !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fab.fa-github {
+    color: #333 !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for social media icons */
+.fab.fa-google:hover, 
+.fab.fa-linkedin:hover, 
+.fab.fa-microsoft:hover, 
+.fab.fa-github:hover, 
+.fab.fa-twitter:hover {
+    font-size: 2.5em;
+    transition: 0.3s ease-out;
+    transform: scale(1.1);
+}
+
+.headbtn1, .headbtn2, .headbtn3{
+    border: none;
+    padding: 2% 20px 2% 20px;
+    width: 122px;
+    font-weight: bold;
+    background-color: transparent;
+    margin-left: 0px;
+}
+.headbtn1:hover, .headbtn2:hover, .headbtn3:hover{
+    background-color: rgb(223, 231, 184);
+}
+
+.headbtn1{
+    margin-top: -40%;
+    margin-bottom: 10%;
+}
+
+/* Additional Font Awesome fixes */
+.text-center i {
+    margin: 5px !important;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.text-center i:hover {
+    background: rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Force Font Awesome to display */
+i[class*="fa-"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+}
+
+/* Enhanced 3D Background for Login Page */
+body {
+    background: 
+        radial-gradient(ellipse at 10% 30%, rgba(138, 43, 226, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 70%, rgba(30, 144, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 90%, rgba(255, 20, 147, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 80%, rgba(0, 250, 154, 0.2) 0%, transparent 50%),
+        linear-gradient(135deg, 
+            #ff9a9e 0%, 
+            #fecfef 15%, 
+            #b5fffc 30%, 
+            #a8e6cf 45%,
+            #ffd3e1 60%,
+            #c7e9fb 75%,
+            #f6d365 90%,
+            #fda085 100%) !important;
+    background-size: 400% 400% !important;
+    animation: backgroundFloat 20s ease infinite !important;
+    min-height: 100vh !important;
+    position: relative !important;
+}
+
+/* Floating Animation for Background */
+@keyframes backgroundFloat {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Enhanced Wrapper with 3D Glass Effect */
+.wrapper {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(25px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 20px !important;
+    box-shadow: 
+        0 25px 45px rgba(0, 0, 0, 0.1),
+        0 15px 35px rgba(0, 0, 0, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),
+        0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    position: relative !important;
+    transform-style: preserve-3d !important;
+    transition: all 0.4s ease !important;
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
+    border-radius: 22px;
+    z-index: -1;
+    filter: blur(6px);
+    opacity: 0.4;
+    animation: borderGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+    0% { opacity: 0.4; filter: blur(6px) hue-rotate(0deg); }
+    100% { opacity: 0.7; filter: blur(8px) hue-rotate(360deg); }
+}
+
+.wrapper:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg) !important;
+    box-shadow: 
+        0 35px 65px rgba(0, 0, 0, 0.15),
+        0 25px 50px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Enhanced Container */
+.container {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(30px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.08),
+        0 10px 25px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Enhanced Tab Buttons */
+.headbtn1, .headbtn2, .headbtn3 {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: #333 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+.headbtn1::before, .headbtn2::before, .headbtn3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.headbtn1:hover::before, .headbtn2:hover::before, .headbtn3:hover::before {
+    left: 100%;
+}
+
+.headbtn1:hover, .headbtn2:hover, .headbtn3:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Enhanced Login Button */
+.loginbtn {
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    border: none !important;
+    color: white !important;
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+.loginbtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.loginbtn:hover::before {
+    left: 100%;
+}
+
+.loginbtn:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Form Input Enhancements */
+.form-control {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(102, 126, 234, 0.5) !important;
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.2) !important;
+    transform: scale(1.02) !important;
+}
+
+/* Forgot Password Link Styling */
+.forgot-password-link {
+  color: #2563eb !important;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-left: 42%;
+  display: inline-block;
+}
+
+.forgot-password-link:hover {
+  color: #1d4ed8 !important;
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
+
+.forgot-password-link:active {
+  transform: translateY(0);
+}
+
+/* Create Account Link Styling */
+.create-account-link {
+  color: #7c3aed !important;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-left: 5px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(79, 70, 229, 0.1) 100%);
+}
+
+.create-account-link:hover {
+  color: #6d28d9 !important;
+  text-decoration: none;
+  transform: translateY(-2px) scale(1.05);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.2) 0%, rgba(79, 70, 229, 0.2) 100%);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.create-account-link:active {
+  transform: translateY(0) scale(1);
+}
+
+/* Sign-up section styling */
+.sign-up {
+  color: #4b5563;
+  font-size: 14px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "framework": "angular",
+  "installCommand": "npm install --legacy-peer-deps",
+  "buildCommand": "npm run build -- --configuration=production",
+  "outputDirectory": "dist/HealthCareManagement",
+  "env": {
+    "NODE_OPTIONS": "--openssl-legacy-provider"
+  }
+}
