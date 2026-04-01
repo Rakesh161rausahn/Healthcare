@@ -50,11 +50,11 @@ export class RegistrationComponent implements OnInit {
       error: err => {
         console.error('Registration Failed', err);
         this.msg = '';  // Clear any previous messages
-        
+
         // Extract error message properly - handle all cases
         try {
           if (err.status === 0) {
-            this.msg = 'Cannot connect to server. Please check if backend is running on port 8081.';
+            this.msg = 'Cannot connect to server. Please try again in a few seconds.';
           } else if (err.status === 409) {
             this.msg = `User with email ${this.user.email} already exists!`;
           } else if (err.status === 500) {
@@ -81,7 +81,7 @@ export class RegistrationComponent implements OnInit {
         } catch (e) {
           this.msg = 'Registration failed. Please try again.';
         }
-        
+
         console.log('Error message set to:', this.msg);
       }
     });
@@ -100,11 +100,11 @@ export class RegistrationComponent implements OnInit {
       error: err => {
         console.error('Doctor Registration Failed', err);
         this.msg = '';  // Clear any previous messages
-        
+
         // Extract error message properly - handle all cases
         try {
           if (err.status === 0) {
-            this.msg = 'Cannot connect to server. Please check if backend is running on port 8081.';
+            this.msg = 'Cannot connect to server. Please try again in a few seconds.';
           } else if (err.status === 409) {
             this.msg = `Doctor with email ${this.doctor.email} already exists!`;
           } else if (typeof err.error === 'string' && err.error.trim() !== '') {
@@ -121,7 +121,7 @@ export class RegistrationComponent implements OnInit {
         } catch (e) {
           this.msg = 'Registration failed. Please try again.';
         }
-        
+
         console.log('Error message set to:', this.msg);
       }
     });
